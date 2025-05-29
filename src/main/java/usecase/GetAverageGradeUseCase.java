@@ -32,6 +32,10 @@ public final class GetAverageGradeUseCase {
         if (count == 0) {
             return 0;
         }
+        for (String temp : team.getMembers()) {
+            sum += gradeDataBase.getGrade(temp, course).getGrade();
+            count++;
+        }
         return sum / count;
     }
 }
