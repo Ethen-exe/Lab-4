@@ -264,7 +264,7 @@ public class Application {
             }
         });
 
-        get.TopGrade.addActionListener(event -> {
+        getTopGradeButton.addActionListener(event -> {
             final String course = courseField.getText();
             try {
                 final int top = getTopGradeUseCase.getTopGrade(course);
